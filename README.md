@@ -1,0 +1,1 @@
+This is a simple chat application built with Javascript sockets
