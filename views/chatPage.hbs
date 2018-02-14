@@ -1,0 +1,152 @@
+<head>
+    <title>Palce |{{username}}</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/navigation.css">
+    <link rel="stylesheet" href="/stylesheets/chatPage.css">
+    <link rel="shortcut icon" href="/images/faviconn.png" type="image/x-icon">
+    <script src="/scripts/bootstrap.min.js"></script>
+    <script src="/scripts/navigation.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+       /* var socket = io();
+        var username;
+        
+        function setUsername(){
+            username = document.getElementById('p').innerHTML;
+            socket.emit('setUsername', username);
+        }
+        var user;
+        socket.on('userSet', function(data){
+            user = data.username;
+            
+        });
+        socket.on('userExists', function(data){
+
+        });
+        function sendMessage(){
+            var msg = document.getElementById('message').value;
+            if(msg){
+                //document.getElementById('message-container').innerHTML = msg;
+                socket.emit('msg', {message: msg, user: user});
+            }
+            
+            document.getElementById('message').value = '';
+        }
+        socket.on('newmsg', function(data){
+                document.getElementById('message-container').innerHTML = data;
+            });
+        */
+
+        var socket = io();
+
+        function setUsername(){
+            var username = document.getElementById('p').innerHTML;
+            //socket.emit('setUsername', document.getElementById('name').value);
+            socket.emit('setUsername', username);
+        }
+        var user;
+        socket.on('userExists', function(data){
+            document.getElementById('error-container').innerHTML = data;
+        });
+        socket.on('userSet', function(data){
+            user = data.username;
+            document.getElementById('sendmessage').innerHTML = '<input type="text" name="message" id="message" class="form-control" placeholder="Start typing...">\
+            <button type="button" name="button" onclick="sendMessage();" class="btn">Send</button>\
+            <div id="message-container"></div>';
+            
+        });
+        function sendMessage(){
+            var msg = document.getElementById('message').value;
+            document.getElementById('message').value = "";
+            if(msg){
+                socket.emit('msg', {message: msg, user: user});
+            }
+        }
+        socket.on('newmsg', function(data){
+            if(user){
+                if(user !== data.user){
+                    document.getElementById('message-container').innerHTML += '<div id="message-them"><b>'
+                     + data.user + '</b>: ' + data.message + ' </div> <div id="space"><br><p id="space">_</p></div>' ;
+                }
+                else{
+                    document.getElementById('message-container').innerHTML += '<div id="message-me"><b>'
+                     + data.user + '</b>: ' + data.message + ' </div> <div id="space"><br><p id="space">_</p></div>' ;
+                }
+            }
+        });
+        
+    </script>
+</head>
+<body onload="setUsername();">
+    <header id="head">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <img src="/images/faviconn.png" alt="" id="icon">
+                </div>
+                <div class="navbar-header" id="header2">
+                    <form action="/search" method="get">
+                        <input type="search" name="search" id="search" class="form-control" placeholder="Search">
+                    </form>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><img src="/images/photos/{{photoPath}}" alt="{{name}}'s Profile Picture" id="icon"></li>
+                    <li class="active" id="home"><a href="/profile">{{name}}</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        
+
+        <div id="allusers">
+            <h2>Friends</h2>
+            <div id="users">
+                {{#each users}}
+                <figure id="figusers">
+                    <img src="/images/photos/{{photo}}" alt="{{name}}'s Photo" id="pic">
+                    <figcaption id="figcusers">
+                        {{name}} <br>
+                        @{{username}}
+                    </figcaption>
+                </figure>
+                <br><br>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="container-fluid" id="mychat">
+            <div class="container-fluid">
+                <div id="message-container">
+
+                </div>
+                <p id="p" hidden="hidden">{{username}}</p>
+                <div id="error-container">
+
+                </div>
+                
+            </div>
+
+            <div id="sendmessage">
+
+            </div>
+
+            <div id="messages" class="container-fluid">
+                {{#each messages}}
+                <strong>{{from}}</strong><br>
+                {{message}} <br><br>
+                {{/each}}
+            </div>
+
+        </div>
+    </section>
+    <script>
+        function onstart(){
+            let username = document.getElementById('p').innerHTML;
+            if
+        }
+        
+    </script>
+    
+</body>

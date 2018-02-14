@@ -1,0 +1,36 @@
+body{
+    background-color: #e6e6e6;
+}
+#edit{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 1px solid #667b8c;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#button{
+    text-align: center;
+}
+button{
+    width: 100%;
+    background-color: #667b8c;
+    color: #d9d9d9;
+}
+button:hover{
+    background-color: #a6b0b8;
+    color: #5485ad;
+}
+label{
+    color: #667b8c;
+    font-size: 15px;
+}
+textarea{
+    margin-bottom: 20px;
+}
+h2{
+    text-align: center;
+    color: #4554b9; 
+}

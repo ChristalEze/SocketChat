@@ -1,0 +1,86 @@
+<head>
+    <title>Palce</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/navigation.css">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <link rel="shortcut icon" href="/images/faviconn.png" type="image/x-icon">
+    <script src="/scripts/bootstrap.min.js"></script>
+    <script src="/scripts/navigation.js"></script>
+</head>
+<body>
+    <header id="head">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand" id="header">PALCE CHAT</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active" id="home"><a href="/">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container-fluid">
+            <div id="palce">
+                <h1>palce</h1>
+                <h5>Expanding your niche...</h5>
+            </div>
+            <div id="error">
+                    <p>{{error}}</p>
+                </div>
+            <div id="signin">
+                <h2>SIGN IN</h2>
+                <form action="/login" method="post" onsubmit="return validation();">
+                    <div id="usernam">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" class="form-control">
+                    </div>
+                    <div id="passwor">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                    </div>
+                    <div id="button">
+                        <button type="submit" class="btn">SIGN IN</button>
+                    </div>
+                    
+                </form>
+                
+            </div>
+            <div id="create">
+                <p><span>Do not have an account?</span></p>
+                <div id="signup">
+                    <p id="signup"><a href="/signup">Signup</a></p>
+                </div>
+                
+            </div>
+                
+            
+
+        </div>
+    </section>
+
+    <footer>
+        <div id="foot">
+            Palce &copy; 2018 |Crafted by Santos
+        </div>
+    </footer>
+    <script>
+        function validation(){
+            var username = document.getElementById('username').value,
+                password = document.getElementById('password').value,
+            wps = /^\s*$/;
+            if(wps.test(username) || wps.test(password)){
+                alert('Please no field must be empty');
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+
+    
+    
+</body>

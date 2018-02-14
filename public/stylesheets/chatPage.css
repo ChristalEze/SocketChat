@@ -1,0 +1,134 @@
+body{
+    background-color: #e6e6e6;
+}
+footer{
+    background-color: #271a05;
+    color: white;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 60px;
+    margin-top: 314px;
+}
+#foot{
+    padding-top: 20px;
+    text-align: center;
+}
+#username{
+    visibility: hidden;
+}
+#sendmessage{
+    width: 600px;
+    margin-left: 20px;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+#button{
+    text-align: center;
+}
+button{
+    width: 10%;
+    height: 2.35em;
+    background-color: #667b8c;
+    color: #d9d9d9;
+    float: right;
+    margin-top: -33px;
+    margin-left: 50px;
+}
+button:hover{
+    background-color: #a6b0b8;
+    color: #5485ad;
+}
+
+strong{
+    font-size: 16px;
+}
+#messages{
+    text-align: left;
+    margin-top: 20px;
+    color: #667b8c;
+}
+#message-container{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    width: 700px
+}
+#message-me{
+    margin-left: auto;
+    border-radius: 20px;
+    background-color: #5485ad;
+    color: white;
+    width: 300px;
+    text-align: center;
+    padding: 3px;
+}
+#message-them{
+    margin-right: auto;
+    border-radius: 20px;
+    background-color: #a6b0b8;
+    color: white;
+    width: 300px;
+    text-align: center;
+    padding: 3px;
+}
+#space{
+    background-color: #e6e6e6;
+    margin-right: auto;
+    margin-left: auto;
+    height: 10px;
+    color: #e6e6e6;
+}
+#icon{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 7px;
+}
+li{
+    font-size: 14px;
+    font-weight: bold;
+}
+#search{
+    height: 25px;
+    width: 350px;
+    margin-top: 12px;
+}
+#header2{
+    margin-left: 30px;
+}
+section{
+    width: 600px;
+}
+#mychat{
+    width: 400px;
+    float: left;
+    margin-top: -190px;
+}
+#allusers{
+    width: 250px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    float: left;
+    margin-left: 1000px;
+}
+#figusers{
+    width: 200px;
+}
+#figcusers{
+    margin-top: 5px;
+    margin-left: 80px;
+}
+#pic{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+}
+h2{
+    color: #5485ad;
+    text-align: center;
+}

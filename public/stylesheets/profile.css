@@ -1,0 +1,70 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer {
+    margin-top: 190px;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+nav ul li a:hover {
+    text-decoration: none;
+}
+hr{
+    height: 2px;
+}
+h3{
+    color: #5485ad;
+    text-align: center;
+}
+img{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+figure{
+    text-align: center;
+    margin-top: 10px;
+    width: 300px;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+figcaption{
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+p{
+    text-align: center;
+    margin-top: 10px;
+}
+a{
+    color: #5485ad;
+}
+a:hover{
+    color: rgb(34, 49, 48);
+    text-decoration-line: none;
+}
+#editbio{
+    border: 1px solid #5485ad;
+    border-radius: 20px;
+    width: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#editbio:hover{
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+

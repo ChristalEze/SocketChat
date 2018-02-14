@@ -1,0 +1,63 @@
+<head>
+    <title>Palce |Contact</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/contact.css">
+    <link rel="stylesheet" href="/stylesheets/navigation.css">
+    <link rel="shortcut icon" href="/images/faviconn.png" type="image/x-icon">
+    <script src="/scripts/bootstrap.min.js"></script>
+    <script src="/scripts/navigation.js"></script>
+</head>
+<body>
+    <header id="head">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand" id="header">PALCE CHAT</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container-fluid">
+            <h2>Send Feedback/Compliants</h2>
+            <form action="/feedback" method="post" onsubmit="return validation();">
+                <div id="email">
+                    <label for="email">Email Id</label>
+                    <input type="email" name="em" id="em" class="form-control">
+                </div>
+                <div id="message">
+                    <label for="message">Message</label>
+                    <textarea name="msg" id="msg" cols="30" rows="5" class="form-control"></textarea>
+                </div>
+                <div id="button">
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+    <footer>
+        <div id="foot">
+            Palce &copy; 2018 |Crafted by Santos
+        </div>
+    </footer>
+    <script>
+        function validation(){
+            var message = document.getElementById('msg').value,
+            email = document.getElementById('em').value,
+            wps = /^\s*$/;
+            if(wps.test(message) || wps.test(email)){
+                alert('Please fill out all fields');
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+</body>

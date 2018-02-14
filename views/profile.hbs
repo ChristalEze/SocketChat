@@ -1,0 +1,42 @@
+<head>
+    <title>Palce |{{username}}'s Profile</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <link rel="shortcut icon" href="/images/faviconn.png" type="image/x-icon">
+    <script src="/scripts/bootstrap.min.js"></script>
+    <script src="/scripts/navigation.js"></script>
+</head>
+<body>
+    <section class="container-fluid">
+        <div id="myprofile">
+            <div class="container-fluid">
+                <figure>
+                    <img src="/images/photos/{{photoPath}}" alt="{{name}}'s Photo">
+                    <figcaption>
+                        {{name}} (@{{username}})
+                    </figcaption>
+                </figure>
+
+                <div id="shortbio">
+                    <h3>Short Bio of {{name}}</h3> 
+                    <p id="editbio"><a href="/editbio">Edit</a></p>
+                    <p>{{bio}}</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <hr>
+        <div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/chat">&nbsp;< Back</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>

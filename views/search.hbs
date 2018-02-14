@@ -1,0 +1,65 @@
+<head>
+    <title>Palce |{{query}}</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/search.css">
+    <link rel="stylesheet" href="/stylesheets/navigation.css">
+    <link rel="shortcut icon" href="/images/faviconn.png" type="image/x-icon">
+    <script src="/scripts/bootstrap.min.js"></script>
+    <script src="/scripts/navigation.js"></script>
+</head>
+<body>
+    <header id="head">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand" id="header">PALCE CHAT</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container-fluid">
+            <div id="input">
+                <form action="/search" method="get">
+                    <input type="search" name="search" id="search" class="form-control" placeholder="Search">
+                </form>
+            </div>
+            <strong>{{searchResults}}</strong> {{query}} <br><br>
+            {{#each contents}}
+            <div class="result">
+                <a href="/user/{{username}}">
+                    <h4>{{name}}</h4>
+                    <p><i>{{bio}}</i></p>
+                </a>
+            </div>
+            <br>
+                
+            {{/each}}
+        </div>
+    </section>
+
+    
+    <footer>
+        <div id="foot">
+            Palce &copy; 2018 |Crafted by Santos
+        </div>
+    </footer>
+    <script>
+        function validation(){
+            var query = document.getElementById('search').value,
+            wps = /^\s*$/;
+            if(wps.test(query)){
+                alert('Please type a term');
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+    
+</body>

@@ -1,0 +1,100 @@
+body{
+    background-color: #e6e6e6;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+section{
+    background-image: url('../images/vision2020.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: -20px;
+}
+footer{
+    background-color: #271a05;
+    color: white;
+    font-size: 14px;
+    height: 60px;
+    margin-top: 150px;
+}
+#foot{
+    padding-top: 20px;
+    text-align: center;
+}
+#palce{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    color: #4554b9;
+    text-align: center;
+    font-size: 80px;
+}
+h5{
+    color: #4554b9;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+#signin{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+input{
+    margin-bottom: 15px;
+}
+#button{
+    text-align: center;
+}
+button{
+    width: 100%;
+    background-color: #667b8c;
+    color: #d9d9d9;
+}
+button:hover{
+    background-color: #a6b0b8;
+    color: #5485ad;
+}
+label{
+    font-size: 15px;
+}
+h2{
+    text-align: center; 
+}
+#error{
+    background-color: white;
+    color: red;
+    font-size: 14px;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+#create{
+    text-align: center;
+    margin-top: 30px;
+    color: black;
+}
+#signup{
+    color: #271a05;
+    background-color: #667b8c;
+    width: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 12px;
+}
+a:hover{
+    text-decoration-line: none;
+}
+#signup:hover{
+    text-decoration-line: none;
+    background-color: #a6b0b8;
+}
+select{
+    margin-bottom: 15px;
+}
